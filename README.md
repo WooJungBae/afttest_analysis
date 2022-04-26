@@ -1,2 +1,2 @@
 # afttest_analysis
-Simulation studies and real data analysis for package afttest
+R package afttest: simulation studies and real data analysis
