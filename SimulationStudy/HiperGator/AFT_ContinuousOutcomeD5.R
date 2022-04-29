@@ -1,13 +1,10 @@
 # Load R packages
-library(devtools)
 library(Rcpp)
 library(RcppArmadillo)
 library(survival)
 library(ggplot2)
 library(gridExtra)
 library(aftgee)
-
-install_github("WoojungBae/afttest")
 library(afttest)
 
 # Load R code
@@ -17,7 +14,7 @@ Scenario = 1
 
 {
   # The numer of simulation run per file
-  sim_per_file = 20
+  sim_per_file = 200
   
   # Extract ID for simulated dataset (specific to LSF computing cluster)
   # Note: The LSB_JOBINDEX is specified in the bsub command using the -J
@@ -57,12 +54,12 @@ Scenario = 1
   alpha = 0.05
   
   # Type 2 error check
-  gamma_0 = 0
+  # gamma_0 = 0
   # gamma_0 = 0.1
   # gamma_0 = 0.2
   # gamma_0 = 0.3
   # gamma_0 = 0.4
-  # gamma_0 = 0.5
+  gamma_0 = 0.5
 }
 
 # ------------------------------------------------------------------------------
