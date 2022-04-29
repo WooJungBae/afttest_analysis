@@ -16,28 +16,6 @@ Scenario = 1
   # The numer of simulation run per file
   sim_per_file = 200
   
-  # Extract ID for simulated dataset (specific to LSF computing cluster)
-  # Note: The LSB_JOBINDEX is specified in the bsub command using the -J
-  # option
-  run_ID = as.integer(Sys.getenv("SLURM_ARRAY_TASK_ID"))
-  
-  # Specify the seed so can repeat simulation later if necessary
-  set.seed(run_ID)
-  
-  txt.title = paste0("Results/afttest",Scenario,"_result.txt")
-  if (run_ID == 1) {
-    df = data.frame(matrix(ncol = 13, nrow = 0))
-    df_col_names = c("run_ID", 
-                     "omni_mns_pvalue", "omni_mns_stdpvalue",
-                     "omni_mis_pvalue", "omni_mis_stdpvalue",
-                     "link_mns_pvalue", "link_mns_stdpvalue",
-                     "link_mis_pvalue", "link_mis_stdpvalue",
-                     "form_mns_pvalue", "form_mns_stdpvalue",
-                     "form_mis_pvalue", "form_mis_stdpvalue")
-    colnames(df) = df_col_names
-    write.table(df, file = txt.title, sep = "\t", row.names = FALSE, col.names = TRUE)
-  }
-  
   # ------ Define of constants (adjust to fit the data generating scenario) ------
   
   # Define number of observations for each dataset
@@ -60,6 +38,28 @@ Scenario = 1
   gamma_0 = 0.3
   # gamma_0 = 0.4
   # gamma_0 = 0.5
+  
+  # Extract ID for simulated dataset (specific to LSF computing cluster)
+  # Note: The LSB_JOBINDEX is specified in the bsub command using the -J
+  # option
+  run_ID = as.integer(Sys.getenv("SLURM_ARRAY_TASK_ID"))
+  
+  # Specify the seed so can repeat simulation later if necessary
+  set.seed(run_ID)
+  
+  txt.title = paste0("Results/afttest",gamma_0*10,"_result.txt")
+  if (run_ID == 1) {
+    df = data.frame(matrix(ncol = 13, nrow = 0))
+    df_col_names = c("run_ID", 
+                     "omni_mns_pvalue", "omni_mns_stdpvalue",
+                     "omni_mis_pvalue", "omni_mis_stdpvalue",
+                     "link_mns_pvalue", "link_mns_stdpvalue",
+                     "link_mis_pvalue", "link_mis_stdpvalue",
+                     "form_mns_pvalue", "form_mns_stdpvalue",
+                     "form_mis_pvalue", "form_mis_stdpvalue")
+    colnames(df) = df_col_names
+    write.table(df, file = txt.title, sep = "\t", row.names = FALSE, col.names = TRUE)
+  }
 }
 
 # ------------------------------------------------------------------------------
