@@ -25,8 +25,15 @@ Scenario = 1
   N = 100
   
   # The number of the approximated paths for each simulation is 200
-  # path = 1000
-  path = 200
+  if (N>999){
+    # for big N (e.g. N = 1000), can use less samples
+    path = 200
+  } else if(N>499){
+    path = 500
+  } else{
+    # for small N (e.g. N = 250), need more paths
+    path = 1000
+  }
   
   # Type 1 error control
   alpha = 0.05
