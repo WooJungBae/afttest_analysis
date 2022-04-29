@@ -14,7 +14,7 @@ Scenario = 1
 
 {
   # The numer of simulation run per file
-  sim_per_file = 200
+  sim_per_file = 20
   
   # Extract ID for simulated dataset (specific to LSF computing cluster)
   # Note: The LSB_JOBINDEX is specified in the bsub command using the -J

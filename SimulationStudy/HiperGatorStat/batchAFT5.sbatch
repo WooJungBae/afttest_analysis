@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=Sim3                          # Job name
+#SBATCH --job-name=Sim5                          # Job name
 #SBATCH --array=1-50                                # At most 50 jobs at a time YMMV, make sure $
 #SBATCH --cpus-per-task=1
 #SBATCH --account=statistics
