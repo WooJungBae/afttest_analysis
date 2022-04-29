@@ -1,13 +1,13 @@
 # Load R packages
 library(devtools)
-install_github("WoojungBae/afttest")
-
 library(Rcpp)
 library(RcppArmadillo)
 library(survival)
 library(ggplot2)
 library(gridExtra)
 library(aftgee)
+
+install_github("WoojungBae/afttest")
 library(afttest)
 
 # Load R code
