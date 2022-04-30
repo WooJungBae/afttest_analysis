@@ -31,7 +31,7 @@ library(afttest)
 #-------------------------------------------------------------
 set.seed(1)
 
-path=100
+path=200
 
 cgd_data = subset(cgd,enum==1,c(tstop,status,treat,age,steroids))
 
