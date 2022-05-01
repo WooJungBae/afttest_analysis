@@ -31,7 +31,7 @@ library(afttest)
 #-------------------------------------------------------------
 set.seed(1)
 
-path=100
+path=200
 
 delete_na=which(is.na(pbc$protime)==TRUE)
 
