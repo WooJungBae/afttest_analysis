@@ -6,7 +6,7 @@
 #SBATCH --qos=statistics
 #SBATCH --mail-type=ALL                            # Mail events (NONE, BEGIN, END, FAIL, AL$
 #SBATCH --mail-user=woojung.bae@ufl.edu    # Where to send mail
-#SBATCH --mem=10G                                   # Memory limit
+#SBATCH --mem=2G                                   # Memory limit
 #SBATCH --partition=hpg-default
 #SBATCH --time=2-00:00:00                          # Time limit hrs:min:sec
 #SBATCH --output=outfiles/array_%A-%a_D1.log  # the SLURM outputs will be created i$

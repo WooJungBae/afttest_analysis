@@ -14,7 +14,7 @@ Scenario = 1
 
 {
   # The numer of simulation run per file
-  sim_per_file = 20
+  sim_per_file = 40
   
   # ------ Define of constants (adjust to fit the data generating scenario) ------
   
@@ -25,15 +25,7 @@ Scenario = 1
   N = 100
   
   # The number of the approximated paths for each simulation is 200
-  if (N>999){
-    # for big N (e.g. N = 1000), can use less samples
-    path = 200
-  } else if(N>499){
-    path = 500
-  } else{
-    # for small N (e.g. N = 250), need more paths
-    path = 1000
-  }
+  path = 500
   
   # Type 1 error control
   alpha = 0.05
@@ -129,8 +121,8 @@ if (Scenario == 1){
     result_link_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='link', eqType='mis')
     
     # ------------------------------------ form ------------------------------------
-    result_form_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='form', eqType='mns', form = 1)
-    result_form_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='form', eqType='mis', form = 1)
+    result_form_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='form', eqType='mns', form = 2)
+    result_form_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='form', eqType='mis', form = 2)
     
     # ------------------------------------------------------------------------------
     run = sim + (run_ID-1)*(sim_per_file)
