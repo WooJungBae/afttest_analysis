@@ -19,9 +19,8 @@ Scenario = 1
   # ------ Define of constants (adjust to fit the data generating scenario) ------
   
   # Define number of observations for each dataset
-  # N = 1000
   # N = 500
-  # N = 250
+  # N = 300
   N = 100
   
   # The number of the approximated paths for each simulation is 200

@@ -91,12 +91,6 @@ result01_afttest_form4_mns$p_std_value
 # afttestplot(result01_afttest_form4_mns,std="unstd")
 # afttestplot(result01_afttest_form4_mns,std="std")
 
-result01_afttest_form5_mns=afttest(Surv(X_pbc,D_pbc)~bili+protime+albumin+age+edema,path=path,testtype="form",eqType="mns",form="edema")
-result01_afttest_form5_mns$p_value
-result01_afttest_form5_mns$p_std_value
-# afttestplot(result01_afttest_form5_mns,std="unstd")
-# afttestplot(result01_afttest_form5_mns,std="std")
-
 # ------------------------------------------------------------------------------
 # --------------- Covariates: log_bili+protime+albumin+age+edema ---------------
 # ------------------------------------------------------------------------------
@@ -139,12 +133,6 @@ result02_afttest_form4_mns$p_value
 result02_afttest_form4_mns$p_std_value
 # afttestplot(result02_afttest_form4_mns,std="unstd")
 # afttestplot(result02_afttest_form4_mns,std="std")
-
-result02_afttest_form5_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+protime+albumin+age+edema,path=path,testtype="form",eqType="mns",form="edema")
-result02_afttest_form5_mns$p_value
-result02_afttest_form5_mns$p_std_value
-# afttestplot(result02_afttest_form5_mns,std="unstd")
-# afttestplot(result02_afttest_form5_mns,std="std")
 
 # ------------------------------------------------------------------------------
 # --------------- Covariates: bili+log_protime+albumin+age+edema ---------------
@@ -189,12 +177,6 @@ result03_afttest_form4_mns$p_std_value
 # afttestplot(result03_afttest_form4_mns,std="unstd")
 # afttestplot(result03_afttest_form4_mns,std="std")
 
-result03_afttest_form5_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_protime+albumin+age+edema,path=path,testtype="form",eqType="mns",form="edema")
-result03_afttest_form5_mns$p_value
-result03_afttest_form5_mns$p_std_value
-# afttestplot(result03_afttest_form5_mns,std="unstd")
-# afttestplot(result03_afttest_form5_mns,std="std")
-
 # ------------------------------------------------------------------------------
 # --------------- Covariates: bili+protime+log_albumin+age+edema ---------------
 # ------------------------------------------------------------------------------
@@ -237,12 +219,6 @@ result04_afttest_form4_mns$p_value
 result04_afttest_form4_mns$p_std_value
 # afttestplot(result04_afttest_form4_mns,std="unstd")
 # afttestplot(result04_afttest_form4_mns,std="std")
-
-result04_afttest_form5_mns=afttest(Surv(X_pbc,D_pbc)~bili+protime+log_albumin+age+edema,path=path,testtype="form",eqType="mns",form="edema")
-result04_afttest_form5_mns$p_value
-result04_afttest_form5_mns$p_std_value
-# afttestplot(result04_afttest_form5_mns,std="unstd")
-# afttestplot(result04_afttest_form5_mns,std="std")
 
 # ------------------------------------------------------------------------------
 # --------------- Covariates: bili+protime+albumin+log_age+edema ---------------
@@ -287,12 +263,6 @@ result05_afttest_form4_mns$p_std_value
 # afttestplot(result05_afttest_form4_mns,std="unstd")
 # afttestplot(result05_afttest_form4_mns,std="std")
 
-result05_afttest_form5_mns=afttest(Surv(X_pbc,D_pbc)~bili+protime+albumin+log_age+edema,path=path,testtype="form",eqType="mns",form="edema")
-result05_afttest_form5_mns$p_value
-result05_afttest_form5_mns$p_std_value
-# afttestplot(result05_afttest_form5_mns,std="unstd")
-# afttestplot(result05_afttest_form5_mns,std="std")
-
 # ------------------------------------------------------------------------------
 # ------------- Covariates: log_bili+log_protime+albumin+age+edema -------------
 # ------------------------------------------------------------------------------
@@ -335,12 +305,6 @@ result06_afttest_form4_mns$p_value
 result06_afttest_form4_mns$p_std_value
 # afttestplot(result06_afttest_form4_mns,std="unstd")
 # afttestplot(result06_afttest_form4_mns,std="std")
-
-result06_afttest_form5_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_protime+albumin+age+edema,path=path,testtype="form",eqType="mns",form="edema")
-result06_afttest_form5_mns$p_value
-result06_afttest_form5_mns$p_std_value
-# afttestplot(result06_afttest_form5_mns,std="unstd")
-# afttestplot(result06_afttest_form5_mns,std="std")
 
 # ------------------------------------------------------------------------------
 # ------------- Covariates: log_bili+protime+log_albumin+age+edema -------------
@@ -385,12 +349,6 @@ result07_afttest_form4_mns$p_std_value
 # afttestplot(result07_afttest_form4_mns,std="unstd")
 # afttestplot(result07_afttest_form4_mns,std="std")
 
-result07_afttest_form5_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+protime+log_albumin+age+edema,path=path,testtype="form",eqType="mns",form="edema")
-result07_afttest_form5_mns$p_value
-result07_afttest_form5_mns$p_std_value
-# afttestplot(result07_afttest_form5_mns,std="unstd")
-# afttestplot(result07_afttest_form5_mns,std="std")
-
 # ------------------------------------------------------------------------------
 # ------------- Covariates: log_bili+protime+albumin+log_age+edema -------------
 # ------------------------------------------------------------------------------
@@ -433,12 +391,6 @@ result08_afttest_form4_mns$p_value
 result08_afttest_form4_mns$p_std_value
 # afttestplot(result08_afttest_form4_mns,std="unstd")
 # afttestplot(result08_afttest_form4_mns,std="std")
-
-result08_afttest_form5_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+protime+albumin+log_age+edema,path=path,testtype="form",eqType="mns",form="edema")
-result08_afttest_form5_mns$p_value
-result08_afttest_form5_mns$p_std_value
-# afttestplot(result08_afttest_form5_mns,std="unstd")
-# afttestplot(result08_afttest_form5_mns,std="std")
 
 # ------------------------------------------------------------------------------
 # ------------- Covariates: bili+log_protime+log_albumin+age+edema -------------
@@ -483,12 +435,6 @@ result09_afttest_form4_mns$p_std_value
 # afttestplot(result09_afttest_form4_mns,std="unstd")
 # afttestplot(result09_afttest_form4_mns,std="std")
 
-result09_afttest_form5_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_protime+log_albumin+age+edema,path=path,testtype="form",eqType="mns",form="edema")
-result09_afttest_form5_mns$p_value
-result09_afttest_form5_mns$p_std_value
-# afttestplot(result09_afttest_form5_mns,std="unstd")
-# afttestplot(result09_afttest_form5_mns,std="std")
-
 # ------------------------------------------------------------------------------
 # ------------- Covariates: bili+log_protime+albumin+log_age+edema -------------
 # ------------------------------------------------------------------------------
@@ -531,12 +477,6 @@ result10_afttest_form4_mns$p_value
 result10_afttest_form4_mns$p_std_value
 # afttestplot(result10_afttest_form4_mns,std="unstd")
 # afttestplot(result10_afttest_form4_mns,std="std")
-
-result10_afttest_form5_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_protime+albumin+log_age+edema,path=path,testtype="form",eqType="mns",form="edema")
-result10_afttest_form5_mns$p_value
-result10_afttest_form5_mns$p_std_value
-# afttestplot(result10_afttest_form5_mns,std="unstd")
-# afttestplot(result10_afttest_form5_mns,std="std")
 
 # ------------------------------------------------------------------------------
 # ------------- Covariates: bili+protime+log_albumin+log_age+edema -------------
@@ -581,12 +521,6 @@ result11_afttest_form4_mns$p_std_value
 # afttestplot(result11_afttest_form4_mns,std="unstd")
 # afttestplot(result11_afttest_form4_mns,std="std")
 
-result11_afttest_form5_mns=afttest(Surv(X_pbc,D_pbc)~bili+protime+log_albumin+log_age+edema,path=path,testtype="form",eqType="mns",form="edema")
-result11_afttest_form5_mns$p_value
-result11_afttest_form5_mns$p_std_value
-# afttestplot(result11_afttest_form5_mns,std="unstd")
-# afttestplot(result11_afttest_form5_mns,std="std")
-
 # ------------------------------------------------------------------------------
 # ----------- Covariates: log_bili+log_protime+log_albumin+age+edema -----------
 # ------------------------------------------------------------------------------
@@ -629,12 +563,6 @@ result12_afttest_form4_mns$p_value
 result12_afttest_form4_mns$p_std_value
 # afttestplot(result12_afttest_form4_mns,std="unstd")
 # afttestplot(result12_afttest_form4_mns,std="std")
-
-result12_afttest_form5_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_protime+log_albumin+age+edema,path=path,testtype="form",eqType="mns",form="edema")
-result12_afttest_form5_mns$p_value
-result12_afttest_form5_mns$p_std_value
-# afttestplot(result12_afttest_form5_mns,std="unstd")
-# afttestplot(result12_afttest_form5_mns,std="std")
 
 # ------------------------------------------------------------------------------
 # ----------- Covariates: log_bili+log_protime+albumin+log_age+edema -----------
@@ -679,12 +607,6 @@ result13_afttest_form4_mns$p_std_value
 # afttestplot(result13_afttest_form4_mns,std="unstd")
 # afttestplot(result13_afttest_form4_mns,std="std")
 
-result13_afttest_form5_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_protime+albumin+log_age+edema,path=path,testtype="form",eqType="mns",form="edema")
-result13_afttest_form5_mns$p_value
-result13_afttest_form5_mns$p_std_value
-# afttestplot(result13_afttest_form5_mns,std="unstd")
-# afttestplot(result13_afttest_form5_mns,std="std")
-
 # ------------------------------------------------------------------------------
 # ----------- Covariates: log_bili+protime+log_albumin+log_age+edema -----------
 # ------------------------------------------------------------------------------
@@ -727,12 +649,6 @@ result14_afttest_form4_mns$p_value
 result14_afttest_form4_mns$p_std_value
 # afttestplot(result14_afttest_form4_mns,std="unstd")
 # afttestplot(result14_afttest_form4_mns,std="std")
-
-result14_afttest_form5_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+protime+log_albumin+log_age+edema,path=path,testtype="form",eqType="mns",form="edema")
-result14_afttest_form5_mns$p_value
-result14_afttest_form5_mns$p_std_value
-# afttestplot(result14_afttest_form5_mns,std="unstd")
-# afttestplot(result14_afttest_form5_mns,std="std")
 
 # ------------------------------------------------------------------------------
 # ----------- Covariates: bili+log_protime+log_albumin+log_age+edema -----------
@@ -777,12 +693,6 @@ result15_afttest_form4_mns$p_std_value
 # afttestplot(result15_afttest_form4_mns,std="unstd")
 # afttestplot(result15_afttest_form4_mns,std="std")
 
-result15_afttest_form5_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_protime+log_albumin+log_age+edema,path=path,testtype="form",eqType="mns",form="edema")
-result15_afttest_form5_mns$p_value
-result15_afttest_form5_mns$p_std_value
-# afttestplot(result15_afttest_form5_mns,std="unstd")
-# afttestplot(result15_afttest_form5_mns,std="std")
-
 # ------------------------------------------------------------------------------
 # --------- Covariates: log_bili+log_protime+log_albumin+log_age+edema ---------
 # ------------------------------------------------------------------------------
@@ -825,21 +735,6 @@ result16_afttest_form4_mns$p_value
 result16_afttest_form4_mns$p_std_value
 # afttestplot(result16_afttest_form4_mns,std="unstd")
 # afttestplot(result16_afttest_form4_mns,std="std")
-
-result16_afttest_form5_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_protime+log_albumin+log_age+edema,path=path,testtype="form",eqType="mns",form="edema")
-result16_afttest_form5_mns$p_value
-result16_afttest_form5_mns$p_std_value
-# afttestplot(result16_afttest_form5_mns,std="unstd")
-# afttestplot(result16_afttest_form5_mns,std="std")
-
-beta11=aftsrr(Surv(X_pbc,D_pbc)~log_bili+protime+albumin+log_age+edema,eqType="mns")
-summary(beta11)
-
-beta16=aftsrr(Surv(X_pbc,D_pbc)~log_bili+log_protime+albumin+log_age+edema,eqType="mns")
-summary(beta16)
-
-beta19=aftsrr(Surv(X_pbc,D_pbc)~log_bili+log_protime+log_albumin+log_age+edema,eqType="mns")
-summary(beta19)
 
 # ------------------------------------------------------------------------------
 # ------------------------------------ "mis" -----------------------------------
@@ -888,12 +783,6 @@ result01_afttest_form4_mis$p_std_value
 # afttestplot(result01_afttest_form4_mis,std="unstd")
 # afttestplot(result01_afttest_form4_mis,std="std")
 
-result01_afttest_form5_mis=afttest(Surv(X_pbc,D_pbc)~bili+protime+albumin+age+edema,path=path,testtype="form",eqType="mis",form="edema")
-result01_afttest_form5_mis$p_value
-result01_afttest_form5_mis$p_std_value
-# afttestplot(result01_afttest_form5_mis,std="unstd")
-# afttestplot(result01_afttest_form5_mis,std="std")
-
 # ------------------------------------------------------------------------------
 # --------------- Covariates: log_bili+protime+albumin+age+edema ---------------
 # ------------------------------------------------------------------------------
@@ -936,12 +825,6 @@ result02_afttest_form4_mis$p_value
 result02_afttest_form4_mis$p_std_value
 # afttestplot(result02_afttest_form4_mis,std="unstd")
 # afttestplot(result02_afttest_form4_mis,std="std")
-
-result02_afttest_form5_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+protime+albumin+age+edema,path=path,testtype="form",eqType="mis",form="edema")
-result02_afttest_form5_mis$p_value
-result02_afttest_form5_mis$p_std_value
-# afttestplot(result02_afttest_form5_mis,std="unstd")
-# afttestplot(result02_afttest_form5_mis,std="std")
 
 # ------------------------------------------------------------------------------
 # --------------- Covariates: bili+log_protime+albumin+age+edema ---------------
@@ -986,12 +869,6 @@ result03_afttest_form4_mis$p_std_value
 # afttestplot(result03_afttest_form4_mis,std="unstd")
 # afttestplot(result03_afttest_form4_mis,std="std")
 
-result03_afttest_form5_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_protime+albumin+age+edema,path=path,testtype="form",eqType="mis",form="edema")
-result03_afttest_form5_mis$p_value
-result03_afttest_form5_mis$p_std_value
-# afttestplot(result03_afttest_form5_mis,std="unstd")
-# afttestplot(result03_afttest_form5_mis,std="std")
-
 # ------------------------------------------------------------------------------
 # --------------- Covariates: bili+protime+log_albumin+age+edema ---------------
 # ------------------------------------------------------------------------------
@@ -1034,12 +911,6 @@ result04_afttest_form4_mis$p_value
 result04_afttest_form4_mis$p_std_value
 # afttestplot(result04_afttest_form4_mis,std="unstd")
 # afttestplot(result04_afttest_form4_mis,std="std")
-
-result04_afttest_form5_mis=afttest(Surv(X_pbc,D_pbc)~bili+protime+log_albumin+age+edema,path=path,testtype="form",eqType="mis",form="edema")
-result04_afttest_form5_mis$p_value
-result04_afttest_form5_mis$p_std_value
-# afttestplot(result04_afttest_form5_mis,std="unstd")
-# afttestplot(result04_afttest_form5_mis,std="std")
 
 # ------------------------------------------------------------------------------
 # --------------- Covariates: bili+protime+albumin+log_age+edema ---------------
@@ -1084,12 +955,6 @@ result05_afttest_form4_mis$p_std_value
 # afttestplot(result05_afttest_form4_mis,std="unstd")
 # afttestplot(result05_afttest_form4_mis,std="std")
 
-result05_afttest_form5_mis=afttest(Surv(X_pbc,D_pbc)~bili+protime+albumin+log_age+edema,path=path,testtype="form",eqType="mis",form="edema")
-result05_afttest_form5_mis$p_value
-result05_afttest_form5_mis$p_std_value
-# afttestplot(result05_afttest_form5_mis,std="unstd")
-# afttestplot(result05_afttest_form5_mis,std="std")
-
 # ------------------------------------------------------------------------------
 # ------------- Covariates: log_bili+log_protime+albumin+age+edema -------------
 # ------------------------------------------------------------------------------
@@ -1132,12 +997,6 @@ result06_afttest_form4_mis$p_value
 result06_afttest_form4_mis$p_std_value
 # afttestplot(result06_afttest_form4_mis,std="unstd")
 # afttestplot(result06_afttest_form4_mis,std="std")
-
-result06_afttest_form5_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_protime+albumin+age+edema,path=path,testtype="form",eqType="mis",form="edema")
-result06_afttest_form5_mis$p_value
-result06_afttest_form5_mis$p_std_value
-# afttestplot(result06_afttest_form5_mis,std="unstd")
-# afttestplot(result06_afttest_form5_mis,std="std")
 
 # ------------------------------------------------------------------------------
 # ------------- Covariates: log_bili+protime+log_albumin+age+edema -------------
@@ -1182,12 +1041,6 @@ result07_afttest_form4_mis$p_std_value
 # afttestplot(result07_afttest_form4_mis,std="unstd")
 # afttestplot(result07_afttest_form4_mis,std="std")
 
-result07_afttest_form5_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+protime+log_albumin+age+edema,path=path,testtype="form",eqType="mis",form="edema")
-result07_afttest_form5_mis$p_value
-result07_afttest_form5_mis$p_std_value
-# afttestplot(result07_afttest_form5_mis,std="unstd")
-# afttestplot(result07_afttest_form5_mis,std="std")
-
 # ------------------------------------------------------------------------------
 # ------------- Covariates: log_bili+protime+albumin+log_age+edema -------------
 # ------------------------------------------------------------------------------
@@ -1230,12 +1083,6 @@ result08_afttest_form4_mis$p_value
 result08_afttest_form4_mis$p_std_value
 # afttestplot(result08_afttest_form4_mis,std="unstd")
 # afttestplot(result08_afttest_form4_mis,std="std")
-
-result08_afttest_form5_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+protime+albumin+log_age+edema,path=path,testtype="form",eqType="mis",form="edema")
-result08_afttest_form5_mis$p_value
-result08_afttest_form5_mis$p_std_value
-# afttestplot(result08_afttest_form5_mis,std="unstd")
-# afttestplot(result08_afttest_form5_mis,std="std")
 
 # ------------------------------------------------------------------------------
 # ------------- Covariates: bili+log_protime+log_albumin+age+edema -------------
@@ -1280,12 +1127,6 @@ result09_afttest_form4_mis$p_std_value
 # afttestplot(result09_afttest_form4_mis,std="unstd")
 # afttestplot(result09_afttest_form4_mis,std="std")
 
-result09_afttest_form5_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_protime+log_albumin+age+edema,path=path,testtype="form",eqType="mis",form="edema")
-result09_afttest_form5_mis$p_value
-result09_afttest_form5_mis$p_std_value
-# afttestplot(result09_afttest_form5_mis,std="unstd")
-# afttestplot(result09_afttest_form5_mis,std="std")
-
 # ------------------------------------------------------------------------------
 # ------------- Covariates: bili+log_protime+albumin+log_age+edema -------------
 # ------------------------------------------------------------------------------
@@ -1328,12 +1169,6 @@ result10_afttest_form4_mis$p_value
 result10_afttest_form4_mis$p_std_value
 # afttestplot(result10_afttest_form4_mis,std="unstd")
 # afttestplot(result10_afttest_form4_mis,std="std")
-
-result10_afttest_form5_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_protime+albumin+log_age+edema,path=path,testtype="form",eqType="mis",form="edema")
-result10_afttest_form5_mis$p_value
-result10_afttest_form5_mis$p_std_value
-# afttestplot(result10_afttest_form5_mis,std="unstd")
-# afttestplot(result10_afttest_form5_mis,std="std")
 
 # ------------------------------------------------------------------------------
 # ------------- Covariates: bili+protime+log_albumin+log_age+edema -------------
@@ -1378,12 +1213,6 @@ result11_afttest_form4_mis$p_std_value
 # afttestplot(result11_afttest_form4_mis,std="unstd")
 # afttestplot(result11_afttest_form4_mis,std="std")
 
-result11_afttest_form5_mis=afttest(Surv(X_pbc,D_pbc)~bili+protime+log_albumin+log_age+edema,path=path,testtype="form",eqType="mis",form="edema")
-result11_afttest_form5_mis$p_value
-result11_afttest_form5_mis$p_std_value
-# afttestplot(result11_afttest_form5_mis,std="unstd")
-# afttestplot(result11_afttest_form5_mis,std="std")
-
 # ------------------------------------------------------------------------------
 # ----------- Covariates: log_bili+log_protime+log_albumin+age+edema -----------
 # ------------------------------------------------------------------------------
@@ -1426,12 +1255,6 @@ result12_afttest_form4_mis$p_value
 result12_afttest_form4_mis$p_std_value
 # afttestplot(result12_afttest_form4_mis,std="unstd")
 # afttestplot(result12_afttest_form4_mis,std="std")
-
-result12_afttest_form5_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_protime+log_albumin+age+edema,path=path,testtype="form",eqType="mis",form="edema")
-result12_afttest_form5_mis$p_value
-result12_afttest_form5_mis$p_std_value
-# afttestplot(result12_afttest_form5_mis,std="unstd")
-# afttestplot(result12_afttest_form5_mis,std="std")
 
 # ------------------------------------------------------------------------------
 # ----------- Covariates: log_bili+log_protime+albumin+log_age+edema -----------
@@ -1476,12 +1299,6 @@ result13_afttest_form4_mis$p_std_value
 # afttestplot(result13_afttest_form4_mis,std="unstd")
 # afttestplot(result13_afttest_form4_mis,std="std")
 
-result13_afttest_form5_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_protime+albumin+log_age+edema,path=path,testtype="form",eqType="mis",form="edema")
-result13_afttest_form5_mis$p_value
-result13_afttest_form5_mis$p_std_value
-# afttestplot(result13_afttest_form5_mis,std="unstd")
-# afttestplot(result13_afttest_form5_mis,std="std")
-
 # ------------------------------------------------------------------------------
 # ----------- Covariates: log_bili+protime+log_albumin+log_age+edema -----------
 # ------------------------------------------------------------------------------
@@ -1524,12 +1341,6 @@ result14_afttest_form4_mis$p_value
 result14_afttest_form4_mis$p_std_value
 # afttestplot(result14_afttest_form4_mis,std="unstd")
 # afttestplot(result14_afttest_form4_mis,std="std")
-
-result14_afttest_form5_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+protime+log_albumin+log_age+edema,path=path,testtype="form",eqType="mis",form="edema")
-result14_afttest_form5_mis$p_value
-result14_afttest_form5_mis$p_std_value
-# afttestplot(result14_afttest_form5_mis,std="unstd")
-# afttestplot(result14_afttest_form5_mis,std="std")
 
 # ------------------------------------------------------------------------------
 # ----------------- Covariates: bili+protime+albumin+age+edema -----------------
@@ -1574,12 +1385,6 @@ result15_afttest_form4_mis$p_std_value
 # afttestplot(result15_afttest_form4_mis,std="unstd")
 # afttestplot(result15_afttest_form4_mis,std="std")
 
-result15_afttest_form5_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_protime+log_albumin+log_age+edema,path=path,testtype="form",eqType="mis",form="edema")
-result15_afttest_form5_mis$p_value
-result15_afttest_form5_mis$p_std_value
-# afttestplot(result15_afttest_form5_mis,std="unstd")
-# afttestplot(result15_afttest_form5_mis,std="std")
-
 # ------------------------------------------------------------------------------
 # --------- Covariates: log_bili+log_protime+log_albumin+log_age+edema ---------
 # ------------------------------------------------------------------------------
@@ -1622,12 +1427,6 @@ result16_afttest_form4_mis$p_value
 result16_afttest_form4_mis$p_std_value
 # afttestplot(result16_afttest_form4_mis,std="unstd")
 # afttestplot(result16_afttest_form4_mis,std="std")
-
-result16_afttest_form5_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_protime+log_albumin+log_age+edema,path=path,testtype="form",eqType="mis",form="edema")
-result16_afttest_form5_mis$p_value
-result16_afttest_form5_mis$p_std_value
-# afttestplot(result16_afttest_form5_mis,std="unstd")
-# afttestplot(result16_afttest_form5_mis,std="std")
 
 # # ------------------------------------------------------------------------------
 # # ------------------------------------------------------------------------------
