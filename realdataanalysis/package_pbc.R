@@ -3,8 +3,6 @@
 #-------------------------------------------------------------
 #rm(list=ls());gc();
 
-memory.limit(16*2^20)
-
 options(max.print=999999)
 options(error=NULL)
 
@@ -31,19 +29,19 @@ library(afttest)
 #-------------------------------------------------------------
 set.seed(1)
 
-path=200
+path = 200
 
-delete_na=which(is.na(pbc$protime)+is.na(pbc$trt)>0)
+delete_na = which((is.na(pbc$protime)+is.na(pbc$trt))>0)
 
 D_pbc = pbc$status[-delete_na]; D_pbc[which(D_pbc==1)]=0; D_pbc[which(D_pbc==2)]=1
 X_pbc = pbc$time[-delete_na]
 
-trt = pbc$trt[-delete_na]-1; range(trt);
-edema = pbc$edema[-delete_na]; range(edema);
 bili = pbc$bili[-delete_na]; range(bili); log_bili=log(bili)
 protime = pbc$protime[-delete_na]; range(protime); log_protime=log(protime)
 albumin = pbc$albumin[-delete_na]; range(albumin); log_albumin=log(albumin)
 age = pbc$age[-delete_na]; range(age); log_age=log(age)
+edema = pbc$edema[-delete_na]; range(edema);
+trt = pbc$trt[-delete_na]-1; range(trt);
 
 # ------------------------------------------------------------------------------
 # ------------------------------------ "mns" -----------------------------------

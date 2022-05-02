@@ -3,8 +3,6 @@
 #-------------------------------------------------------------
 #rm(list=ls());gc();
 
-memory.limit(16*2^20)
-
 options(max.print=999999)
 options(error=NULL)
 
