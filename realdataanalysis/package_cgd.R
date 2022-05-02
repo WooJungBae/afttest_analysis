@@ -148,5 +148,4 @@ result02_afttest_link_mns$p_std_value
 # afttestplot(result01_afttest_link_mns,std="unstd")
 # afttestplot(result01_afttest_link_mns,std="std")
 
-
-
+save.image(file = "Results/CGDpackage.RData")

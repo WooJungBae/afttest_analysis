@@ -1437,3 +1437,5 @@ result16_afttest_form4_mis$p_std_value
 # 
 # beta19=aftsrr(Surv(X_pbc,D_pbc)~log_bili+log_protime+log_albumin+log_age+edema+trt,eqType="mis")
 # summary(beta19)
+
+save.image(file = "Results/PBCpackage.RData")
