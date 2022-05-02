@@ -10,7 +10,7 @@ library(afttest)
 # Load R code
 source("afttest_source_r.R")
 
-Scenario = 1
+Scenario = 11
 
 {
   # The numer of simulation run per file
