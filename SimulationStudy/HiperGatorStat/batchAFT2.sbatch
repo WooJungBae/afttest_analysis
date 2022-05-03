@@ -9,11 +9,11 @@
 #SBATCH --mem=2G                                   # Memory limit
 #SBATCH --partition=hpg-default
 #SBATCH --time=2-00:00:00                          # Time limit hrs:min:sec
-#SBATCH --output=outfiles/array_%A-%a_D2.log  # the SLURM outputs will be created i$
+#SBATCH --output=outfiles/array_%A-%a_AFT2.log  # the SLURM outputs will be created i$
 
 date; hostname; pwd
 
 module load gcc R
 
 #Run R script
-Rscript AFT_ContinuousOutcomeD2.R
+Rscript AFT_ContinuousOutcome2.R
