@@ -29,7 +29,7 @@ library(afttest)
 #-------------------------------------------------------------
 set.seed(1)
 
-path=200
+path = 200
 
 cgd_data = subset(cgd,enum==1,c(tstop,status,treat,age,steroids))
 
@@ -103,49 +103,49 @@ result02_afttest_link_mns$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-result01_afttest_omni_mns=afttest(Surv(X_cgd,D_cgd)~trt+str+age,path=path,testtype="omni",eqType="mis")
-result01_afttest_omni_mns$p_value
-result01_afttest_omni_mns$p_std_value
-# afttestplot(result01_afttest_omni_mns,std="unstd")
-# afttestplot(result01_afttest_omni_mns,std="std")
+result01_afttest_omni_mis=afttest(Surv(X_cgd,D_cgd)~trt+str+age,path=path,testtype="omni",eqType="mis")
+result01_afttest_omni_mis$p_value
+result01_afttest_omni_mis$p_std_value
+# afttestplot(result01_afttest_omni_mis,std="unstd")
+# afttestplot(result01_afttest_omni_mis,std="std")
 
 # ------------------------------------ link ------------------------------------
-result01_afttest_link_mns=afttest(Surv(X_cgd,D_cgd)~trt+str+age,path=path,testtype="link",eqType="mis")
-result01_afttest_link_mns$p_value
-result01_afttest_link_mns$p_std_value
-# afttestplot(result01_afttest_link_mns,std="unstd")
-# afttestplot(result01_afttest_link_mns,std="std")
+result01_afttest_link_mis=afttest(Surv(X_cgd,D_cgd)~trt+str+age,path=path,testtype="link",eqType="mis")
+result01_afttest_link_mis$p_value
+result01_afttest_link_mis$p_std_value
+# afttestplot(result01_afttest_link_mis,std="unstd")
+# afttestplot(result01_afttest_link_mis,std="std")
 
 # ------------------------------------ form ------------------------------------
-result01_afttest_link_mns=afttest(Surv(X_cgd,D_cgd)~trt+str+age,path=path,testtype="link",eqType="mis",form="age")
-result01_afttest_link_mns$p_value
-result01_afttest_link_mns$p_std_value
-# afttestplot(result01_afttest_link_mns,std="unstd")
-# afttestplot(result01_afttest_link_mns,std="std")
+result01_afttest_link_mis=afttest(Surv(X_cgd,D_cgd)~trt+str+age,path=path,testtype="link",eqType="mis",form="age")
+result01_afttest_link_mis$p_value
+result01_afttest_link_mis$p_std_value
+# afttestplot(result01_afttest_link_mis,std="unstd")
+# afttestplot(result01_afttest_link_mis,std="std")
 
 # ------------------------------------------------------------------------------
 # ------------------------- Covariates: trt+str+log_age ------------------------
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-result02_afttest_omni_mns=afttest(Surv(X_cgd,D_cgd)~trt+str+log_age,path=path,testtype="omni",eqType="mis")
-result02_afttest_omni_mns$p_value
-result02_afttest_omni_mns$p_std_value
-# afttestplot(result01_afttest_omni_mns,std="unstd")
-# afttestplot(result01_afttest_omni_mns,std="std")
+result02_afttest_omni_mis=afttest(Surv(X_cgd,D_cgd)~trt+str+log_age,path=path,testtype="omni",eqType="mis")
+result02_afttest_omni_mis$p_value
+result02_afttest_omni_mis$p_std_value
+# afttestplot(result01_afttest_omni_mis,std="unstd")
+# afttestplot(result01_afttest_omni_mis,std="std")
 
 # ------------------------------------ link ------------------------------------
-result02_afttest_link_mns=afttest(Surv(X_cgd,D_cgd)~trt+str+log_age,path=path,testtype="link",eqType="mis")
-result02_afttest_link_mns$p_value
-result02_afttest_link_mns$p_std_value
-# afttestplot(result01_afttest_link_mns,std="unstd")
-# afttestplot(result01_afttest_link_mns,std="std")
+result02_afttest_link_mis=afttest(Surv(X_cgd,D_cgd)~trt+str+log_age,path=path,testtype="link",eqType="mis")
+result02_afttest_link_mis$p_value
+result02_afttest_link_mis$p_std_value
+# afttestplot(result01_afttest_link_mis,std="unstd")
+# afttestplot(result01_afttest_link_mis,std="std")
 
 # ------------------------------------ form ------------------------------------
-result02_afttest_link_mns=afttest(Surv(X_cgd,D_cgd)~trt+str+log_age,path=path,testtype="link",eqType="mis",form="age")
-result02_afttest_link_mns$p_value
-result02_afttest_link_mns$p_std_value
-# afttestplot(result01_afttest_link_mns,std="unstd")
-# afttestplot(result01_afttest_link_mns,std="std")
+result02_afttest_link_mis=afttest(Surv(X_cgd,D_cgd)~trt+str+log_age,path=path,testtype="link",eqType="mis",form="age")
+result02_afttest_link_mis$p_value
+result02_afttest_link_mis$p_std_value
+# afttestplot(result01_afttest_link_mis,std="unstd")
+# afttestplot(result01_afttest_link_mis,std="std")
 
 save.image(file = "Results/CGDpackage.RData")
