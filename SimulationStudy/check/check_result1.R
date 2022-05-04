@@ -55,6 +55,7 @@ colnames(gamma3_rejectionratio) = c("omni","link","form")
 
 # ------------------------------------------------------------------------------
 gamma_0 = 0.4
+txt.title = paste0("afttest","Scn",Scenario,"N",N,"gamma",gamma_0*10,"_result.txt")
 
 gamma4_result = read.table(txt.title, header = TRUE, sep = "", dec = ".", fill = T)
 gamma4_sim = nrow(gamma4_result)-sum(apply(gamma4_result, 1, function(l) (sum(is.na(l))>0)))
@@ -83,8 +84,3 @@ gamma2_rejectionratio
 gamma3_rejectionratio
 gamma4_rejectionratio
 gamma5_rejectionratio
-
-
-
-
-

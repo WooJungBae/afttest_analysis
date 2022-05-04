@@ -26,9 +26,6 @@ Scenario = 11
   # The number of the approximated paths for each simulation is 200
   path = 500
   
-  # Type 1 error control
-  alpha = 0.05
-  
   # Type 2 error check
   # gamma_0 = 0
   gamma_0 = 0.1
@@ -68,6 +65,8 @@ cond3 = (sum(Scenario == c(31,32))>0)
 if (cond1){
   # ------------------------------------------------------------------------------
   for (sim in 1:sim_per_file) {
+    run = sim + (run_ID-1)*(sim_per_file)
+    
     # ------------------------------------------------------------------------------
     temp_data = generate_data(N,gamma_0,Scenario)
     X = temp_data$X
@@ -87,7 +86,6 @@ if (cond1){
     result_form_mis = afttest(Surv(X, D) ~ Z, path=path,testtype='form', eqType='mis', form = 1)
     
     # ------------------------------------------------------------------------------
-    run = sim + (run_ID-1)*(sim_per_file)
     allinfo = data.frame(run,
                          "omni_mns_pvalue" = result_omni_mns$p_value, 
                          "omni_mns_stdpvalue" = result_omni_mns$p_std_value,
@@ -102,10 +100,19 @@ if (cond1){
                          "form_mis_pvalue" = result_form_mis$p_value, 
                          "form_mis_stdpvalue" = result_form_mis$p_std_value)
     write.table(allinfo, file = txt.title, sep = "\t", row.names = FALSE, col.names = FALSE, append = TRUE)
+    rm(list="result_omni_mns")
+    rm(list="result_omni_mis")
+    rm(list="result_link_mns")
+    rm(list="result_link_mis")
+    rm(list="result_form_mns")
+    rm(list="result_form_mis")
+    gc()
   }
 } else if(cond2) {
   # ------------------------------------------------------------------------------
   for (sim in 1:sim_per_file) {
+    run = sim + (run_ID-1)*(sim_per_file)
+    
     # ------------------------------------------------------------------------------
     temp_data = generate_data(N,gamma_0,Scenario)
     X = temp_data$X
@@ -127,7 +134,6 @@ if (cond1){
     result_form_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='form', eqType='mis', form = 2)
     
     # ------------------------------------------------------------------------------
-    run = sim + (run_ID-1)*(sim_per_file)
     allinfo = data.frame(run,
                          "omni_mns_pvalue" = result_omni_mns$p_value, 
                          "omni_mns_stdpvalue" = result_omni_mns$p_std_value,
@@ -142,10 +148,19 @@ if (cond1){
                          "form_mis_pvalue" = result_form_mis$p_value, 
                          "form_mis_stdpvalue" = result_form_mis$p_std_value)
     write.table(allinfo, file = txt.title, sep = "\t", row.names = FALSE, col.names = FALSE, append = TRUE)
+    rm(list="result_omni_mns")
+    rm(list="result_omni_mis")
+    rm(list="result_link_mns")
+    rm(list="result_link_mis")
+    rm(list="result_form_mns")
+    rm(list="result_form_mis")
+    gc()
   }
 } else if(cond3) {
   # ------------------------------------------------------------------------------
   for (sim in 1:sim_per_file) {
+    run = sim + (run_ID-1)*(sim_per_file)
+    
     # ------------------------------------------------------------------------------
     temp_data = generate_data(N,gamma_0,Scenario)
     X = temp_data$X
@@ -167,7 +182,6 @@ if (cond1){
     result_form_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='form', eqType='mis', form = 2)
     
     # ------------------------------------------------------------------------------
-    run = sim + (run_ID-1)*(sim_per_file)
     allinfo = data.frame(run,
                          "omni_mns_pvalue" = result_omni_mns$p_value, 
                          "omni_mns_stdpvalue" = result_omni_mns$p_std_value,
@@ -182,5 +196,12 @@ if (cond1){
                          "form_mis_pvalue" = result_form_mis$p_value, 
                          "form_mis_stdpvalue" = result_form_mis$p_std_value)
     write.table(allinfo, file = txt.title, sep = "\t", row.names = FALSE, col.names = FALSE, append = TRUE)
+    rm(list="result_omni_mns")
+    rm(list="result_omni_mis")
+    rm(list="result_link_mns")
+    rm(list="result_link_mis")
+    rm(list="result_form_mns")
+    rm(list="result_form_mis")
+    gc()
   }
 }
