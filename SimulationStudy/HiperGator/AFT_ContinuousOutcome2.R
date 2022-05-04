@@ -39,9 +39,6 @@ Scenario = 11
   # option
   run_ID = as.integer(Sys.getenv("SLURM_ARRAY_TASK_ID"))
   
-  # Specify the seed so can repeat simulation later if necessary
-  set.seed(run_ID)
-  
   txt.title = paste0("Results/afttest","Scn",Scenario,"N",N,"gamma",gamma_0*10,"_result.txt")
   if (run_ID == 1) {
     df = data.frame(matrix(ncol = 13, nrow = 0))
@@ -65,7 +62,9 @@ cond3 = (sum(Scenario == c(31,32))>0)
 if (cond1){
   # ------------------------------------------------------------------------------
   for (sim in 1:sim_per_file) {
+    # Specify the seed so can repeat simulation later if necessary
     run = sim + (run_ID-1)*(sim_per_file)
+    set.seed(run)
     
     # ------------------------------------------------------------------------------
     temp_data = generate_data(N,gamma_0,Scenario)
@@ -111,7 +110,9 @@ if (cond1){
 } else if(cond2) {
   # ------------------------------------------------------------------------------
   for (sim in 1:sim_per_file) {
+    # Specify the seed so can repeat simulation later if necessary
     run = sim + (run_ID-1)*(sim_per_file)
+    set.seed(run)
     
     # ------------------------------------------------------------------------------
     temp_data = generate_data(N,gamma_0,Scenario)
@@ -159,7 +160,9 @@ if (cond1){
 } else if(cond3) {
   # ------------------------------------------------------------------------------
   for (sim in 1:sim_per_file) {
+    # Specify the seed so can repeat simulation later if necessary
     run = sim + (run_ID-1)*(sim_per_file)
+    set.seed(run)
     
     # ------------------------------------------------------------------------------
     temp_data = generate_data(N,gamma_0,Scenario)
