@@ -7,7 +7,7 @@
 #SBATCH --mail-user=woojung.bae@ufl.edu    # Where to send mail
 #SBATCH --mem=5G                                   # Memory limit
 #SBATCH --partition=hpg-default
-#SBATCH --time=2-00:00:00                          # Time limit hrs:min:sec
+#SBATCH --time=10-00:00:00                          # Time limit hrs:min:sec
 #SBATCH --output=outfiles/array_%A-%a_pbc.log  # the SLURM outputs will be created i$
 
 date; hostname; pwd
