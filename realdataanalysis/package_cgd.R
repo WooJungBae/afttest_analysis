@@ -37,7 +37,7 @@ D_cgd = cgd_data$status
 X_cgd = cgd_data$tstop
 
 trt = ifelse(cgd_data$treat=="placebo",0,1)
-age = cgd_data$age ; log_age = log(age)
+age = cgd_data$age; log_age = log(age)
 str = cgd_data$steroids
 
 # ------------------------------------------------------------------------------
