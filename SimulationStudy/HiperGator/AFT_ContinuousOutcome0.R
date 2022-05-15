@@ -19,9 +19,9 @@ Scenario = 11
   # ------ Define of constants (adjust to fit the data generating scenario) ------
   
   # Define number of observations for each dataset
-  # N = 500
+  N = 500
   # N = 300
-  N = 100
+  # N = 100
   
   # The number of the approximated paths for each simulation is 200
   path = 500
@@ -90,7 +90,7 @@ if (cond1){
                          "omni_mns_stdpvalue" = result_omni_mns$p_std_value,
                          "omni_mis_pvalue" = result_omni_mis$p_value, 
                          "omni_mis_stdpvalue" = result_omni_mis$p_std_value,
-                         "link_mns_pvalue" = result_form_mns$p_value, 
+                         "link_mns_pvalue" = result_link_mns$p_value, 
                          "link_mns_stdpvalue" = result_link_mns$p_std_value,
                          "link_mis_pvalue" = result_link_mis$p_value, 
                          "link_mis_stdpvalue" = result_link_mis$p_std_value,
@@ -140,7 +140,7 @@ if (cond1){
                          "omni_mns_stdpvalue" = result_omni_mns$p_std_value,
                          "omni_mis_pvalue" = result_omni_mis$p_value, 
                          "omni_mis_stdpvalue" = result_omni_mis$p_std_value,
-                         "link_mns_pvalue" = result_form_mns$p_value, 
+                         "link_mns_pvalue" = result_link_mns$p_value, 
                          "link_mns_stdpvalue" = result_link_mns$p_std_value,
                          "link_mis_pvalue" = result_link_mis$p_value, 
                          "link_mis_stdpvalue" = result_link_mis$p_std_value,
@@ -190,7 +190,7 @@ if (cond1){
                          "omni_mns_stdpvalue" = result_omni_mns$p_std_value,
                          "omni_mis_pvalue" = result_omni_mis$p_value, 
                          "omni_mis_stdpvalue" = result_omni_mis$p_std_value,
-                         "link_mns_pvalue" = result_form_mns$p_value, 
+                         "link_mns_pvalue" = result_link_mns$p_value, 
                          "link_mns_stdpvalue" = result_link_mns$p_std_value,
                          "link_mis_pvalue" = result_link_mis$p_value, 
                          "link_mis_stdpvalue" = result_link_mis$p_std_value,
