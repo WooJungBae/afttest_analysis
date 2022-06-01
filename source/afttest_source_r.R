@@ -128,8 +128,8 @@ generate_data = function(N,gamma_0,Scenario) {
     # X_data: observed time
     # D_data: observed indicator
     # Z_data: covariates fitted
-    T_data = exp(- beta_1 * Z1 - beta_2 * Z2 - gamma_0 * log(1 + Z2^{2}) + rexp(N,1))
-    C_data = exp(- beta_1 * Z1 - beta_2 * Z2 - gamma_0 * log(1 + Z2^{2}) + rexp(N,1/4))
+    T_data = exp(- beta_1 * Z1 - beta_2 * Z2 - gamma_0 * lgamma(1+0.5*Z2^{2}) + rexp(N,1))
+    C_data = exp(- beta_1 * Z1 - beta_2 * Z2 - gamma_0 * lgamma(1+0.5*Z2^{2}) + rexp(N,1/4))
     X_data = C_data * (T_data > C_data) + T_data * (T_data <= C_data)
     D_data = 0 * (T_data > C_data) + 1 * (T_data <= C_data)
     Z_data = cbind(Z1,Z2)
